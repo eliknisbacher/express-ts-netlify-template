@@ -116,14 +116,14 @@ app.get('/api', async (req:any, res) => {
 //   return await neoCache(newsJson)
 // }
 
-app.get('/favicon.png', async function (req, res) {
-  const size = 64;
-  const value = rando(999)
-  jdenticon.configure({ backColor: '#000'});
-  const png = jdenticon.toPng(value, size);
-  res.setHeader('Content-Type', 'image/png');
-  res.send(png)
-})
+// app.get('/favicon.png', async function (req, res) {
+//   const size = 64;
+//   const value = rando(999)
+//   jdenticon.configure({ backColor: '#000'});
+//   const png = jdenticon.toPng(value, size);
+//   res.setHeader('Content-Type', 'image/png');
+//   res.send(png)
+// })
 
 app.listen(1080)
 // setInterval(updateNeo, 62000)
