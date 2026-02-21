@@ -17,9 +17,8 @@ import { rando } from '@nastyox/rando.js'
 import * as jdenticon from 'jdenticon'
 
 //import pantry from 'pantry-node'
-
 // @ts-ignore
-import fetchNews from './fetchNews.js'
+import fetchNews from './FetchNews.js'
 
 const app = express()
 
