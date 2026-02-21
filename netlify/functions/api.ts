@@ -22,22 +22,14 @@ import fetchNews from './FetchNews.js'
 
 const app = express()
 
-app.get('/', async (req:any, res:any)=>{
-  res.set({
-    'Cache-Control': 'max-age=9999999999',
-    'CDN-Cache-Control': 'max-age=999999999999'
-  });
-  res.sendFile(path.join(__dirname, '..', 'components', 'local_news.html'))
-})
-
 
 //@ts-ignore
 // global.newsItemCache = await readBucket() //not a problem I think
 //@ts-ignore
 global.updateBool = true
 // @ts-ignore
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 // const pantryID = "4b8eeebc-b2e8-404b-808d-da8a45297b77"
 // const pantryClient = new pantry(pantryID)
 
