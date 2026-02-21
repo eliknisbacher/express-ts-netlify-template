@@ -125,7 +125,7 @@ app.get('/api', async (req:any, rez) => {
 //   res.send(png)
 // })
 
-app.listen(1080)
+//app.listen(1080)
 // setInterval(updateNeo, 62000)
 
 export default app
