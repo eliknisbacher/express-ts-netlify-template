@@ -77,7 +77,7 @@ const sourceNames:any = Object.keys(sourcesObj)
 //       .then((response:any) => res.send(response))
 // })
 
-app.get('/api', async (req:any, res) => {
+app.get('/api', async (req:any, rez) => {
   var time1 = Date.now()
   
   // set timeout before first update
@@ -95,7 +95,7 @@ app.get('/api', async (req:any, res) => {
   // pageHTML = pageHTML.replace('/favicon.png', '/favicon.png?'+rando(9999))//attempts to trick browsers into refreshing favicon cache
   // res.type('html')
   // res.send(pageHTML)
-  res.set({
+  rez.set({
     'Cache-Control': 's-maxage=5, stale-while-revalidate=999999999999999',
     'CDN-Cache-Control': 's-maxage=3, stale-while-revalidate=9999999999999999',
     'Access-Control-Allow-Origin': '*',
@@ -104,8 +104,8 @@ app.get('/api', async (req:any, res) => {
     'Access-Control-Allow-Credentials': 'false'
   })
 
-  res.type('json')
-  res.send(newsJson)
+  rez.type('json')
+  rez.send(newsJson)
   //@ts-ignore
   updateBucket(JSON.stringify(global.newsItemCache))
 })
